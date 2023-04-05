@@ -11,10 +11,10 @@ const RegisterButton = () => {
     };
   
     return (
-      <Link to="/register">
-        <button className='register-btn'>Register</button>
-      </Link>
+      <button className='register-btn' type="button" onClick={handleClick}>
+        Register
+      </button>
     );
-  }
+  };
   
   export default RegisterButton;
