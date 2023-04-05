@@ -1,12 +1,5 @@
 import React, { useState } from 'react';
-import {
-  Box,
-  Button,
-  Container,
-  Grid,
-  TextField,
-  Typography,
-} from '@mui/material';
+import '../styles/RegistrationForm.css'
 
 const RegistrationForm = () => {
   const [formData, setFormData] = useState({
@@ -33,72 +26,45 @@ const RegistrationForm = () => {
   };
 
   return (
-    <Container maxWidth="xs">
-      <Box sx={{ mt: 8 }}>
-        <Typography component="h1" variant="h5" align="center">
-          Register
-        </Typography>
-        <Box component="form" onSubmit={handleSubmit} sx={{ mt: 3 }}>
-          <Grid container spacing={2}>
-            <Grid item xs={12}>
-              <TextField
-                fullWidth
-                required
-                label="Name"
-                name="name"
-                value={name}
-                onChange={handleChange}
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                fullWidth
-                required
-                label="Email Address"
-                name="email"
-                type="email"
-                value={email}
-                onChange={handleChange}
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                fullWidth
-                required
-                label="Password"
-                name="password"
-                type="password"
-                value={password}
-                onChange={handleChange}
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                fullWidth
-                required
-                label="Confirm Password"
-                name="confirmPassword"
-                type="password"
-                value={confirmPassword}
-                onChange={handleChange}
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <Button
-                fullWidth
-                type="submit"
-                variant="contained"
-                color="primary"
-                sx={{ mt: 3, mb: 2 }}
-              >
-                Register
-              </Button>
-            </Grid>
-          </Grid>
-        </Box>
-      </Box>
-    </Container>
+    <div className="form-container">
+      <h1 className="form-title">Register</h1>
+      <form onSubmit={handleSubmit}>
+        <label className="form-label">Name</label>
+        <input
+          type="text"
+          name="name"
+          value={name}
+          onChange={handleChange}
+          className="form-input"
+        />
+        <label className="form-label">Email Address</label>
+        <input
+          type="email"
+          name="email"
+          value={email}
+          onChange={handleChange}
+          className="form-input"
+        />
+        <label className="form-label">Password</label>
+        <input
+          type="password"
+          name="password"
+          value={password}
+          onChange={handleChange}
+          className="form-input"
+        />
+        <label className="form-label">Confirm Password</label>
+        <input
+          type="password"
+          name="confirmPassword"
+          value={confirmPassword}
+          onChange={handleChange}
+          className="form-input"
+        />
+        <button type="submit" className="form-btn">Register</button>
+      </form>
+    </div>
   );
-};
+}
 
 export default RegistrationForm;

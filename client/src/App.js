@@ -1,10 +1,11 @@
 import React from 'react';
-import RegistrationForm from './components/RegistrationForm';
+import WelcomeScreen from './components/WelcomeScreen';
+
 
 function App() {
   return (
     <div className="App">
-      <RegistrationForm />
+      <WelcomeScreen/>
     </div>
   );
 }

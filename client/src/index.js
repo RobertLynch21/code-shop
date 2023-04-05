@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css'; // If you have an index.css file in your src folder
-import App from './App'; // Import your App component
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import App from './App';
+
 
 ReactDOM.render(
-  <React.StrictMode>
+  <BrowserRouter>
     <App />
-  </React.StrictMode>,
+  </BrowserRouter>,
   document.getElementById('root')
 );
